@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-
+import json
+import os
 
 class IBookManager(ABC):
     @abstractmethod
@@ -34,8 +35,6 @@ class Book:
         return f"[ID: {self.id}] '{self.title}' by {self.author}, published in {self.publication_year}"
 
 
-import json
-import os
 
 class BookManager:
     def __init__(self, filename='books_database.json'):
